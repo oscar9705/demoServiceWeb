@@ -10,12 +10,11 @@ definitions:
     - step: &build-test-sonarcloud
         name: Build, test and analyze on SonarCloud
         caches:
-          - gradle
           - sonar
         script:
-          - ./gradlew build sonarqube
+         
         artifacts:
-          - build/libs/**
+          
 
 pipelines:                 # More info here: https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
   branches:
